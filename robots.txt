@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tedle-cordoba.vercel.app/sitemap.xml
