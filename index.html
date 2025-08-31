@@ -1,22 +1,43 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paneles Solares Tier One en Córdoba | Mayorista con Retiro 2 h | Tedle</title>
-    <meta name="description" content="Distribuidor mayorista en Córdoba. Paneles solares Tier One (bankability BloombergNEF), stock local, retiro en 2 h, bundles para instaladores y soporte técnico." />
-    <link rel="canonical" href="https://tedle-cordoba.vercel.app/cordoba-paneles-solares-tier-one" />
-    <meta property="og:title" content="Paneles Solares Tier One en Córdoba | Tedle" />
-    <meta property="og:description" content="Stock local · Retiro 2 h · Bundles para instaladores · Soporte técnico B2B." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tedle-cordoba.vercel.app/cordoba-paneles-solares-tier-one" />
-    <meta property="og:image" content="/og.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="robots" content="index,follow" />
-  </head>
-  <body class="bg-slate-50">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tedle Córdoba | Paneles Solares Tier One</title>
+  <meta name="description" content="Stock local en Córdoba, retiro en 2 h, precios mayoristas para instaladores.">
+  <!-- Tailwind (opcional, solo para estilos rápidos) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-white text-slate-900">
+  <header class="border-b">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="font-bold">TEDLE · Córdoba</div>
+      <a id="wa-top" href="#" class="bg-green-600 text-white px-4 py-2 rounded">WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-extrabold">Paneles solares <span class="text-green-600">Tier One</span> en Córdoba</h1>
+    <p class="mt-3 text-lg">Stock local · Retiro en 2 h · Precios mayoristas para instaladores.</p>
+
+    <div class="mt-6 flex gap-3">
+      <a id="wa-cta" href="#" class="bg-green-600 text-white px-5 py-3 rounded-lg font-semibold">Cotizar por WhatsApp</a>
+      <a href="/public/robots.txt" class="border px-5 py-3 rounded-lg font-semibold">Probar archivo público</a>
+    </div>
+
+    <p class="mt-10 text-sm text-slate-500">Si ves este texto, el deploy está OK.</p>
+  </main>
+
+  <a id="wa-float" href="#" class="fixed bottom-6 right-6 bg-green-600 text-white px-4 py-3 rounded-full shadow">WhatsApp</a>
+
+  <script>
+    // tu número:
+    const number = "5493516123456";
+    const utm = window.location.search || "?utm_source=direct&utm_medium=none&utm_campaign=test";
+    const wa = `https://wa.me/${number}?text=${encodeURIComponent("Hola, quiero info de paneles solares.")}%20${encodeURIComponent(utm)}`;
+    document.getElementById("wa-top").href = wa;
+    document.getElementById("wa-cta").href = wa;
+    document.getElementById("wa-float").href = wa;
+  </script>
+</body>
 </html>
