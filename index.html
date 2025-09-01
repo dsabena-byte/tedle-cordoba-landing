@@ -1,118 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paneles Solares Tier One en Córdoba | Distribuidor Mayorista</title>
-  <meta name="description" content="Paneles solares Tier One en Córdoba con stock inmediato. Kits solares listos, soporte técnico y precios mayoristas para instaladores." />
-
-  <!-- SEO & Open Graph -->
+  <title>Paneles Solares Tier One en Córdoba | Mayorista</title>
+  <meta name="description" content="Distribuidor mayorista en Córdoba. Paneles solares Tier One con stock local, retiro en 2 h, kits listos y soporte técnico especializado." />
   <link rel="canonical" href="https://tedle-cordoba-landing.vercel.app/" />
-  <meta property="og:title" content="Paneles Solares Tier One en Córdoba | Distribuidor Mayorista" />
-  <meta property="og:description" content="Stock inmediato en Córdoba. Kits solares listos, soporte técnico y precios mayoristas para instaladores." />
+
+  <!-- SEO & OG -->
+  <meta property="og:title" content="Paneles Solares Tier One en Córdoba | Tedle" />
+  <meta property="og:description" content="Stock local · Retiro en 2 h · Kits solares listos · Soporte técnico." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tedle-cordoba-landing.vercel.app/" />
-  <meta property="og:image" content="/public/og.jpg" />
+  <meta property="og:image" content="/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicon -->
-  <link rel="icon" href="/public/favicon.ico" />
+  <link rel="icon" href="/favicon.ico" />
 
-  <!-- Tailwind CSS -->
+  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="font-sans text-gray-900">
 
   <!-- Header -->
-  <header class="bg-white shadow fixed w-full z-10">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-xl font-bold">TEDLE · Córdoba</h1>
-      <a href="https://wa.me/5493510000000" class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition">WhatsApp</a>
-    </div>
+  <header class="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-8 py-6 bg-transparent">
+    <h1 class="text-white text-2xl font-bold drop-shadow-lg">TEDLE · Córdoba</h1>
+    <a href="https://wa.me/5493510000000" target="_blank"
+       class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg shadow-md transition">
+       WhatsApp
+    </a>
   </header>
 
   <!-- Hero -->
   <section class="relative h-[90vh] flex items-center justify-center text-center text-white">
-    <img src="/public/hero-solar.jpg" alt="Parque de paneles solares a gran escala en Córdoba"
+    <img src="/hero-solar.jpg" alt="Parque de paneles solares a gran escala en Córdoba"
          class="absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high">
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div class="relative z-10 max-w-3xl px-4">
-      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+    <div class="relative z-10 max-w-3xl px-6">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
         Paneles solares <span class="text-green-400">Tier One</span> con stock en Córdoba
       </h2>
-      <p class="mt-4 text-lg">Precios mayoristas para instaladores · Retiro en 2 h · <strong>kits solares listos</strong> y soporte técnico.</p>
-      <div class="mt-6 flex flex-wrap justify-center gap-4">
-        <a href="https://wa.me/5493510000000" class="bg-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition">💬 Cotizar por WhatsApp</a>
-        <a href="#kits" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">Ver kits solares</a>
+      <p class="text-lg md:text-xl mb-8">
+        Precios mayoristas para instaladores · retiro en 2 h · <strong>kits solares listos</strong> y soporte técnico.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="https://wa.me/5493510000000" target="_blank"
+           class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg font-semibold transition">
+           💬 Cotizar por WhatsApp
+        </a>
+        <a href="#kits"
+           class="bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-lg shadow-lg font-semibold transition">
+           ⚡ Ver kits solares
+        </a>
       </div>
-      <div class="mt-6 flex justify-center gap-6 text-sm">
-        <span>✅ Garantía de fábrica</span>
-        <span>⚡ Eficiencias superiores</span>
-        <span>🔎 Procedencia auditada</span>
+      <div class="flex justify-center gap-6 mt-6 text-sm">
+        <span class="text-green-400">✔ Garantía de fábrica</span>
+        <span class="text-green-400">✔ Eficiencias superiores</span>
+        <span class="text-green-400">✔ Procedencia auditada</span>
       </div>
     </div>
   </section>
 
-  <!-- Por qué Tier One -->
-  <section class="py-16 container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">¿Por qué <span class="text-green-600">Tier One</span>?</h2>
-    <p class="text-center max-w-2xl mx-auto mb-12">
-      Trabajamos con fabricantes del ranking Tier One (financiados por bancos y fondos internacionales por su solvencia y performance). 
-      En campo, esto significa menos fallas y mayor retorno para tus clientes.
+  <!-- Por qué elegir Tier One -->
+  <section class="py-16 px-6 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold mb-10">¿Por qué <span class="text-green-600">Tier One</span>?</h2>
+    <p class="max-w-3xl mx-auto text-gray-700 mb-12">
+      Trabajamos con fabricantes del ranking <strong>Tier One</strong> (bancos y fondos los financian por su solvencia y performance).  
+      En campo se traduce en menos fallas y mejor retorno para tus clientes.
     </p>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow p-4">
-        <img src="/public/instalador-techo.jpg" alt="Instalador de paneles solares en techo en Córdoba" class="rounded-xl w-full h-44 object-cover" loading="lazy">
-        <h3 class="font-semibold mt-4">Instaladores capacitados</h3>
-        <p class="text-sm mt-2">Soporte local para que cada instalación sea rápida, eficiente y sin problemas.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow p-4">
-        <img src="/public/deposito-stock.jpg" alt="Depósito con stock de paneles solares Tier One" class="rounded-xl w-full h-44 object-cover" loading="lazy">
-        <h3 class="font-semibold mt-4">Stock inmediato</h3>
-        <p class="text-sm mt-2">Retirá en 2 h desde nuestro depósito en Córdoba. Sin esperas, sin demoras.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow p-4">
-        <img src="/public/instalacion-industrial.jpg" alt="Instalación industrial de paneles solares en gran escala" class="rounded-xl w-full h-44 object-cover" loading="lazy">
-        <h3 class="font-semibold mt-4">Proyectos a gran escala</h3>
-        <p class="text-sm mt-2">Soluciones confiables para industrias, empresas y desarrollos de energía solar.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Kits solares -->
-  <section id="kits" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-10">Kits Solares <span class="text-green-600">Listos</span></h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl shadow p-4">
-          <img src="/public/instalador-techo.jpg" alt="Kit solar residencial 3 kW en techo" class="rounded-xl w-full h-40 object-cover mt-3" loading="lazy">
-          <h3 class="font-semibold mt-4">Kit Residencial 3 kW</h3>
-          <p class="text-sm mt-2">Ideal para hogares. Incluye paneles, inversor y estructura de montaje.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="/instalador-techo.jpg" alt="Instalador de paneles solares en techo en Córdoba"
+             class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Confianza en la instalación</h3>
+          <p class="text-gray-600 text-sm">Aliados de instaladores profesionales con soporte en cada proyecto.</p>
         </div>
-        <div class="bg-white rounded-xl shadow p-4">
-          <img src="/public/deposito-stock.jpg" alt="Kit solar residencial 5 kW con stock en Córdoba" class="rounded-xl w-full h-40 object-cover mt-3" loading="lazy">
-          <h3 class="font-semibold mt-4">Kit Residencial 5 kW</h3>
-          <p class="text-sm mt-2">Más potencia y eficiencia. Perfecto para casas con mayor consumo.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="/deposito-stock.jpg" alt="Depósito con stock de paneles solares Tier One"
+             class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Stock inmediato</h3>
+          <p class="text-gray-600 text-sm">Depósito en Córdoba · Retiro en el día · Envíos a todo el país.</p>
         </div>
-        <div class="bg-white rounded-xl shadow p-4">
-          <img src="/public/instalacion-industrial.jpg" alt="Kit solar comercial 10 kW en industria" class="rounded-xl w-full h-40 object-cover mt-3" loading="lazy">
-          <h3 class="font-semibold mt-4">Kit Comercial 10 kW</h3>
-          <p class="text-sm mt-2">Solución completa para pymes e industrias. Máxima eficiencia energética.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="/instalacion-industrial.jpg" alt="Instalación industrial de paneles solares en gran escala"
+             class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Proyectos a gran escala</h3>
+          <p class="text-gray-600 text-sm">Equipos confiables para proyectos industriales y comerciales.</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 bg-green-600 text-white text-center">
-    <h2 class="text-3xl font-bold">¿Listo para llevar energía solar a tu proyecto?</h2>
-    <p class="mt-4">Contactanos ahora por WhatsApp y obtené tu cotización inmediata.</p>
-    <a href="https://wa.me/5493510000000" class="mt-6 inline-block bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">💬 Cotizar ahora</a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
-    © 2025 TEDLE Córdoba · Distribuidor oficial de Paneles Solares Tier One
+  <footer class="bg-gray-900 text-gray-300 text-center py-8 mt-12">
+    <p>© 2025 Tedle Córdoba · Paneles Solares Tier One</p>
+    <p class="text-sm mt-2">Desarrollado para mayoristas e instaladores de confianza</p>
   </footer>
 </body>
 </html>
