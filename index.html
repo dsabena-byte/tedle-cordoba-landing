@@ -2,49 +2,35 @@
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Paneles Solares Tier One Córdoba | Kits solares con stock local</title>
-  <meta name="description" content="Distribuidor Tier One en Córdoba. Kits solares listos para instalar, retiro en 2 h, soporte técnico para instaladores. Stock local y garantías de fábrica.">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paneles Solares Tier One en Córdoba | Tedle</title>
+  <meta name="description" content="Distribuidor mayorista en Córdoba. Paneles solares Tier One con stock local, retiro en 2 h y kits solares listos para instalar con soporte técnico.">
   <link rel="canonical" href="https://tedle-cordoba-landing.vercel.app/">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index,follow">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Paneles Solares Tier One Córdoba | Kits solares con stock local">
-  <meta property="og:description" content="Kits listos · retiro en 2 h · soporte al instalador.">
+  <meta property="og:title" content="Paneles Solares Tier One en Córdoba | Tedle">
+  <meta property="og:description" content="Stock local · Retiro en 2 h · Kits solares listos y soporte técnico.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tedle-cordoba-landing.vercel.app/">
   <meta property="og:image" content="/og.jpg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Paneles Solares Tier One Córdoba | Kits solares con stock local">
-  <meta name="twitter:description" content="Kits listos · retiro en 2 h · soporte al instalador.">
+  <meta name="twitter:title" content="Paneles Solares Tier One en Córdoba | Tedle">
+  <meta name="twitter:description" content="Stock local · Retiro en 2 h · Kits solares listos y soporte técnico.">
 
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .glass{backdrop-filter:blur(10px);background:rgba(255,255,255,.65)}
-    .fade-enter{opacity:.0;transform:scale(1.02)}
-    .fade-enter-active{opacity:1;transform:scale(1);transition:opacity .6s ease, transform .6s ease}
-    .fade-exit{opacity:1}
-    .fade-exit-active{opacity:0;transition:opacity .5s ease}
-    .no-select{-webkit-user-select:none;-moz-user-select:none;user-select:none}
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.6) }
+    .slider { position: relative; overflow: hidden; height: 100%; }
+    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease-in-out; }
+    .slide.active { opacity: 1; }
   </style>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Tedle Córdoba - Paneles Solares Tier One",
-    "image":"/og.jpg",
-    "address":{"@type":"PostalAddress","addressLocality":"Córdoba","addressRegion":"Córdoba","addressCountry":"AR"},
-    "url":"https://tedle-cordoba-landing.vercel.app/",
-    "telephone":"+54 9 351 612 3456",
-    "priceRange":"$$",
-    "openingHours":"Mo-Fr 09:00-18:00"
-  }
-  </script>
 </head>
 <body class="bg-white text-slate-900">
 
@@ -60,11 +46,7 @@
   <header class="border-b">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <svg width="38" height="38" viewBox="0 0 64 64" class="shrink-0" aria-label="Logo Tier One">
-          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#059669"/></linearGradient></defs>
-          <rect rx="12" ry="12" width="64" height="64" fill="url(#g)"/>
-          <path d="M19 41l8-18 6 10 5-7 7 15" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="/logo-tedle.jpg" alt="Logo Tedle" class="h-12">
         <div>
           <div class="font-extrabold leading-5">TEDLE · Córdoba</div>
           <div class="text-xs text-slate-500 -mt-0.5">Distribuidor Tier One</div>
@@ -79,287 +61,60 @@
     </div>
   </header>
 
-  <!-- ============ HERO SLIDER ============ -->
-  <section class="relative overflow-hidden" aria-label="Destacados">
-    <div id="hero" class="relative h-[68vh] min-h-[520px] no-select">
-      <!-- Slides se inyectan por JS -->
-      <button aria-label="Prev" id="prev" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white text-slate-900 rounded-full w-11 h-11 grid place-items-center shadow">‹</button>
-      <button aria-label="Next" id="next" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white text-slate-900 rounded-full w-11 h-11 grid place-items-center shadow">›</button>
-      <div id="dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2"></div>
+  <!-- HERO con Slider -->
+  <section class="relative h-[85vh] flex items-center justify-center text-center text-white">
+    <div class="slider absolute inset-0">
+      <img src="/hero-solar.jpg" alt="Paneles solares a gran escala" class="slide active w-full h-full object-cover">
+      <img src="/instalador-techo.jpg" alt="Instalador colocando paneles solares en techo" class="slide w-full h-full object-cover">
+      <img src="/instalacion-industrial.jpg" alt="Instalación industrial de paneles solares" class="slide w-full h-full object-cover">
     </div>
-  </section>
+    <div class="absolute inset-0 bg-slate-900/60"></div>
 
-  <!-- DIFERENCIALES -->
-  <section id="diferenciales" class="max-w-7xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-extrabold">¿Por qué <span class="text-emerald-600">Tier One</span>?</h2>
-    <p class="mt-3 text-slate-600">Fabricantes del ranking Tier One. Menos fallas y mejor retorno para tus clientes.</p>
-
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
-      <div class="p-6 rounded-2xl border">
-        <img src="/instalador-techo.jpg" alt="Instalador de paneles solares en techo en Córdoba" class="rounded-xl w-full h-44 object-cover">
-        <h3 class="mt-4 font-bold text-lg">Eficiencia y potencia real</h3>
-        <p class="text-slate-600 mt-1">Módulos N-Type, bifaciales y garantías de producción. Fichas técnicas claras.</p>
-      </div>
-      <div class="p-6 rounded-2xl border">
-        <img src="/deposito-stock.jpg" alt="Depósito con stock de paneles solares" class="rounded-xl w-full h-44 object-cover">
-        <h3 class="mt-4 font-bold text-lg">Stock local · retiro en 2 h</h3>
-        <p class="text-slate-600 mt-1">Depósito en Córdoba. Retiro en el día o envío a obra.</p>
-      </div>
-      <div class="p-6 rounded-2xl border">
-        <img src="/instalacion-industrial.jpg" alt="Instalación industrial de paneles solares" class="rounded-xl w-full h-44 object-cover">
-        <h3 class="mt-4 font-bold text-lg">Soporte al instalador</h3>
-        <p class="text-slate-600 mt-1">Kits dimensionados, curvas IV y asistencia de puesta en marcha.</p>
+    <div class="relative max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Paneles solares <span class="text-emerald-400">Tier One</span> en Córdoba
+      </h1>
+      <p class="mt-4 text-lg text-white/90">Stock local · retiro en 2 h · <strong>kits solares listos</strong> y soporte técnico.</p>
+      <div class="mt-8 flex flex-wrap gap-3 justify-center">
+        <a id="wa-cta-hero" href="#" class="bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-extrabold px-6 py-3 rounded-xl shadow-lg">💬 Cotizar por WhatsApp</a>
+        <a href="#kits" class="glass text-slate-900 font-semibold px-6 py-3 rounded-xl">Ver kits solares</a>
       </div>
     </div>
   </section>
 
-  <!-- KITS -->
-  <section id="kits" class="bg-slate-50 py-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold">Kits solares listos para instalar</h2>
-      <p class="mt-3 text-slate-600">Paneles + inversor + estructuras + accesorios. Cotización inmediata y soporte técnico.</p>
+  <!-- Aquí mantenés secciones DIFERENCIALES, KITS y CONTACTO del código anterior -->
 
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-2xl border shadow-sm">
-          <h3 class="font-bold text-lg">Residencial 3 kW</h3>
-          <img class="rounded-xl w-full h-40 object-cover mt-3" src="/instalador-techo.jpg" alt="Kit solar residencial 3 kW">
-          <ul class="mt-3 text-sm text-slate-600 space-y-1">
-            <li>• 6 paneles 500–550 W Tier One</li>
-            <li>• Inversor híbrido</li>
-            <li>• Estructuras + conectores</li>
-          </ul>
-          <a id="wa-pack1" href="#" class="mt-4 inline-block w-full text-center bg-emerald-600 text-white py-2 rounded-lg font-semibold hover:bg-emerald-700">Cotizar por WhatsApp</a>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border shadow-sm">
-          <h3 class="font-bold text-lg">Residencial 5 kW</h3>
-          <img class="rounded-xl w-full h-40 object-cover mt-3" src="/deposito-stock.jpg" alt="Kit solar residencial 5 kW">
-          <ul class="mt-3 text-sm text-slate-600 space-y-1">
-            <li>• 10 paneles 500–550 W Tier One</li>
-            <li>• Inversor híbrido</li>
-            <li>• Estructuras + conectores</li>
-          </ul>
-          <a id="wa-pack2" href="#" class="mt-4 inline-block w-full text-center bg-emerald-600 text-white py-2 rounded-lg font-semibold hover:bg-emerald-700">Cotizar por WhatsApp</a>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border shadow-sm">
-          <h3 class="font-bold text-lg">Comercial 10 kW</h3>
-          <img class="rounded-xl w-full h-40 object-cover mt-3" src="/instalacion-industrial.jpg" alt="Kit solar comercial 10 kW">
-          <ul class="mt-3 text-sm text-slate-600 space-y-1">
-            <li>• 18–20 paneles 500–550 W</li>
-            <li>• Inversor trifásico</li>
-            <li>• Estructuras, conectores y protecciones</li>
-          </ul>
-          <a id="wa-pack3" href="#" class="mt-4 inline-block w-full text-center bg-emerald-600 text-white py-2 rounded-lg font-semibold hover:bg-emerald-700">Cotizar por WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MINI SLIDER logos/testimonios -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between overflow-hidden gap-6" id="brandTrack">
-        <!-- Repetí el bloque img para más logos / frases -->
-        <img src="/instalador-techo.jpg" alt="Trabajos en techo" class="h-24 w-40 object-cover rounded-lg opacity-90">
-        <img src="/deposito-stock.jpg" alt="Depósito" class="h-24 w-40 object-cover rounded-lg opacity-90">
-        <img src="/instalacion-industrial.jpg" alt="Industrial" class="h-24 w-40 object-cover rounded-lg opacity-90">
-        <img src="/hero-solar.jpg" alt="Parque solar" class="h-24 w-40 object-cover rounded-lg opacity-90">
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="bg-slate-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-3xl font-extrabold">Hablemos de tu proyecto</h2>
-        <p class="mt-3 text-white/80">Atención a instaladores y empresas. Enviamos lista mayorista y armamos kits a medida.</p>
-        <div class="mt-6 space-y-2 text-white/90">
-          <div>📍 <span id="direccion">Depósito Córdoba</span></div>
-          <a id="maps" href="#" target="_blank" class="underline">Ver mapa</a>
-        </div>
-        <a id="wa-cta-contacto" href="#" class="mt-6 inline-block bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-extrabold px-6 py-3 rounded-xl">💬 Cotizar por WhatsApp</a>
-      </div>
-
-      <form id="lead" class="bg-white text-slate-900 p-6 rounded-2xl shadow">
-        <h3 class="font-bold text-lg">Solicitar lista mayorista</h3>
-        <div class="grid grid-cols-1 gap-3 mt-3">
-          <input class="border p-3 rounded-lg" type="text" id="empresa" placeholder="Empresa" required>
-          <input class="border p-3 rounded-lg" type="text" id="nombre" placeholder="Nombre" required>
-          <input class="border p-3 rounded-lg" type="email" id="email" placeholder="Email" required>
-          <input class="border p-3 rounded-lg" type="tel" id="telefono" placeholder="Teléfono" required>
-          <textarea class="border p-3 rounded-lg" id="mensaje" placeholder="Tipo de proyecto (kW, sitio, etc.)" rows="3"></textarea>
-          <button class="bg-slate-900 text-white py-3 rounded-lg font-semibold hover:opacity-90">Enviar por Email</button>
-        </div>
-        <p class="text-xs text-slate-500 mt-2">También podés escribirnos por WhatsApp con el botón verde.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-10 text-sm text-slate-500">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div>© <span id="year"></span> Tedle Córdoba – Paneles Solares Tier One</div>
-      <div class="flex items-center gap-6">
-        <a href="#diferenciales" class="hover:text-slate-700">Diferenciales</a>
-        <a href="#kits" class="hover:text-slate-700">Kits</a>
-        <a href="#contacto" class="hover:text-slate-700">Contacto</a>
-      </div>
-    </div>
+  <!-- Footer -->
+  <footer class="py-10 text-sm text-slate-500 text-center">
+    © <span id="year"></span> Tedle Córdoba – Paneles Solares Tier One
   </footer>
 
-  <!-- Floating WA -->
+  <!-- Floating WhatsApp -->
   <a id="wa-float" href="#" class="fixed bottom-6 right-6 bg-emerald-600 text-white px-5 py-3 rounded-full shadow-lg font-bold">WhatsApp</a>
 
-  <!-- CONFIG + Sliders + UTM/CTAs -->
+  <!-- Slider JS -->
   <script>
-    // ======== EDITAR ESTOS DATOS ========
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000); // cambia cada 5s
+  </script>
+
+  <!-- Script dinámico para CTAs y UTM -->
+  <script>
     const WHATSAPP_NUMBER = "5493516123456";
-    const REP_EMAIL       = "ventascordoba@tedle.net";
-    const ADDRESS         = "Av. Colón 1234, Córdoba Capital";
-    const MAPS_LINK       = "https://goo.gl/maps/xxxxx";
-    // ====================================
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("direccion").textContent = ADDRESS;
-    document.getElementById("maps").href = MAPS_LINK;
-
     const utm = window.location.search || "?utm_source=direct&utm_medium=none&utm_campaign=site";
-    const waLink = (extra="") => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero cotizar kits solares Tier One en Córdoba. "+extra+" "+utm)}`;
-
-    ["wa-top","wa-header","wa-cta-contacto","wa-pack1","wa-pack2","wa-pack3","wa-float"].forEach(id=>{
-      const a=document.getElementById(id); if(a) a.href=waLink(a.textContent?.trim());
-    });
-
-    // Form a mail
-    document.getElementById("lead").addEventListener("submit",(e)=>{
-      e.preventDefault();
-      const get=id=>document.getElementById(id).value;
-      const subject=encodeURIComponent("Solicitud de lista mayorista - Tedle Córdoba");
-      const body=encodeURIComponent(`Empresa: ${get("empresa")}
-Nombre: ${get("nombre")}
-Email: ${get("email")}
-Teléfono: ${get("telefono")}
-Mensaje: ${get("mensaje")}
-
-UTM: ${utm}`);
-      location.href=`mailto:${REP_EMAIL}?subject=${subject}&body=${body}`;
-    });
-
-    // ===== HERO SLIDER =====
-    const slides = [
-      {
-        img: "/hero-solar.jpg",
-        alt: "Parque de paneles solares",
-        title: "Paneles solares Tier One con stock en Córdoba",
-        text: "Kits solares listos · retiro en 2 h · soporte técnico al instalador.",
-        cta: "💬 Cotizar por WhatsApp",
-        ctaLink: () => waLink("Desde slider - Parque solar"),
-        sec: "Ver kits solares",
-        secHref: "#kits"
-      },
-      {
-        img: "/instalador-techo.jpg",
-        alt: "Instalador en techo",
-        title: "Kits residenciales dimensionados",
-        text: "3 kW · 5 kW · 10 kW. Estructuras, inversor y todo lo necesario.",
-        cta: "Cotizar kit residencial",
-        ctaLink: () => waLink("Kit residencial"),
-        sec: "Ver kits",
-        secHref: "#kits"
-      },
-      {
-        img: "/instalacion-industrial.jpg",
-        alt: "Instalación industrial",
-        title: "Soluciones comerciales e industriales",
-        text: "Soporte técnico y puesta en marcha. Curvas IV y documentación.",
-        cta: "Cotizar proyecto",
-        ctaLink: () => waLink("Proyecto industrial"),
-        sec: "Contactar",
-        secHref: "#contacto"
-      },
-      {
-        img: "/deposito-stock.jpg",
-        alt: "Depósito con stock",
-        title: "Retiro en 2 h desde depósito Córdoba",
-        text: "Stock real, garantía de fábrica y procedencia auditada.",
-        cta: "Ver disponibilidad",
-        ctaLink: () => waLink("Stock depósito Córdoba"),
-        sec: "Mapa",
-        secHref: MAPS_LINK
-      }
-    ];
-
-    const hero = document.getElementById("hero");
-    const dotsWrap = document.getElementById("dots");
-    let current = 0, timer;
-
-    function renderSlide(i, enterDir=1){
-      hero.querySelectorAll(".slide").forEach(n=>n.remove());
-      const s = slides[i];
-      const wrap = document.createElement("div");
-      wrap.className="slide absolute inset-0";
-      wrap.innerHTML = `
-        <img src="${s.img}" alt="${s.alt}" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-slate-900/60"></div>
-        <div class="relative h-full max-w-7xl mx-auto px-4 flex items-center">
-          <div class="max-w-3xl text-white">
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">${s.title}</h1>
-            <p class="mt-4 text-lg text-white/90">${s.text}</p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="${s.ctaLink()}" class="bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-extrabold px-6 py-3 rounded-xl shadow-lg">${s.cta}</a>
-              <a href="${s.secHref}" class="glass text-slate-900 font-semibold px-6 py-3 rounded-xl">${s.sec}</a>
-            </div>
-          </div>
-        </div>`;
-      hero.appendChild(wrap);
-      // animación simple
-      wrap.classList.add("fade-enter");
-      requestAnimationFrame(()=>{
-        wrap.classList.add("fade-enter-active");
-        wrap.classList.remove("fade-enter");
-      });
-      // puntos
-      dotsWrap.innerHTML = slides.map((_,k)=>`
-        <button aria-label="Ir a slide ${k+1}" data-k="${k}"
-          class="w-2.5 h-2.5 rounded-full ${k===i?'bg-white':'bg-white/50 hover:bg-white/80'}"></button>
-      `).join("");
-      dotsWrap.querySelectorAll("button").forEach(b=>b.addEventListener("click",e=>{
-        stop(); current=+e.currentTarget.dataset.k; renderSlide(current); start();
-      }));
+    function waLink(extra="") {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero cotizar kits solares en Córdoba. " + extra + " " + utm)}`;
     }
-
-    function start(){ timer = setInterval(()=>{ next(); }, 6000); }
-    function stop(){ clearInterval(timer); }
-    function next(){ current = (current+1)%slides.length; renderSlide(current); }
-    function prev(){ current = (current-1+slides.length)%slides.length; renderSlide(current); }
-
-    document.getElementById("next").addEventListener("click", ()=>{ stop(); next(); start(); });
-    document.getElementById("prev").addEventListener("click", ()=>{ stop(); prev(); start(); });
-
-    // Swipe
-    let touchX=null;
-    hero.addEventListener("touchstart",e=>touchX=e.changedTouches[0].clientX,{passive:true});
-    hero.addEventListener("touchend",e=>{
-      if(touchX==null) return;
-      const dx=e.changedTouches[0].clientX - touchX;
-      if(Math.abs(dx)>40){ stop(); (dx<0?next():prev()); start(); }
-      touchX=null;
+    ["wa-top","wa-header","wa-cta-hero","wa-float"].forEach(id=>{
+      const a=document.getElementById(id);
+      if(a) a.href=waLink(a.textContent.trim());
     });
-
-    renderSlide(current); start();
-
-    // ===== Mini slider marcas (autoscroll infinito simple) =====
-    const track = document.getElementById("brandTrack");
-    let scrollX = 0;
-    function loopBrands(){
-      scrollX += 0.4;
-      track.scrollLeft = scrollX;
-      if (scrollX >= track.scrollWidth - track.clientWidth) scrollX = 0;
-      requestAnimationFrame(loopBrands);
-    }
-    loopBrands();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
